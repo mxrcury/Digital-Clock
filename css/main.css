@@ -1,0 +1,153 @@
+html{
+    box-sizing:border-box;
+}
+*,*::before, *::after{
+    box-sizing:inherit;
+}
+body{
+    /* font-family: 'SF-Pro', sans-serif; */
+    font-size:18px;
+    color: #161616;
+    margin:0;
+    padding:0;
+    margin: 10px;
+}
+@import url('../font/SF-Pro.ttf');
+
+.accordion{
+    padding: 30px;
+    border: 2px solid #2f2f2f;
+    margin-bottom: 10px;
+}
+.content{
+    font-size: 19px;
+    max-height: 0;
+    overflow: hidden;
+    transition: .2s ease-in-out;
+}
+.accordion__arrow {
+  position: relative;
+}
+.accordion__arrow::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 15px;
+  display: block;
+  background: #79AF98;
+  transform: translateX(-5px) rotate(41deg);
+  transition: .3s ease;
+}
+.accordion__arrow::before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 15px;
+  display: block;
+  background: #79AF98;
+  transform: translateX(-15px) rotate(-42deg);
+  transition: .3s ease;
+}
+.digital-clock{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.digital-clock .container{
+  display: flex;
+}
+.digital-clock div{
+  margin-right: 30px;
+}
+span, .ampm{
+  font-size: 86px;
+  color: white;
+  font-family:'SF-Pro',sans-serif;
+}
+.ampm{
+  font-size: 58px;
+  line-height: 60px;
+  display: flex;
+  align-items: flex-end;
+}
+.block{
+  background: rgb(65, 65, 65);
+  width: 190px;
+  padding: 24px 0;
+  box-shadow: 1px 1px 22px 1px  black;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.block--small{
+  margin-right: 0px;
+}
+.buttons{
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+.btn{
+  padding: 10px 30px;
+  border: 0;
+  /* background:  rgb(255, 255, 255); */
+  background:transparent;
+  border: 1px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-family: 'SF-Pro'sans-serif;
+  font-size: 17px;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+}
+.btn::before{
+  content: '';
+  position: absolute;
+  background: white;
+  width: 10px;
+  left: -10px;
+  top: 0;
+  bottom: 0;
+}
+.btn.active::before{
+  left: calc(100% + 10px);
+  transition: left 500ms;
+}
+.btn-back{
+  padding: 10px 30px;
+  border: 0;
+  /* background:  rgb(255, 255, 255); */
+  background:transparent;
+  border: 1px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-family: 'SF-Pro'sans-serif;
+  font-size: 17px;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+}
+.btn-back::before{
+  content: '';
+  position: absolute;
+  background: white;
+  width: 10px;
+  left: -10px;
+  top: 0;
+  bottom: 0;
+}
+.btn-back.active::before{
+  left: calc(100% + 10px);
+  transition: left 500ms;
+}
+@media screen and (max-width:910px) {
+  .digital-clock{
+    max-width: 800px;
+    padding: 0 30px;
+  }
+}
