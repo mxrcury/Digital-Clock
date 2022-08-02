@@ -5,7 +5,7 @@ html{
     box-sizing:inherit;
 }
 body{
-    /* font-family: 'SF-Pro', sans-serif; */
+    font-family: 'SF-Pro', sans-serif;
     font-size:18px;
     color: #161616;
     margin:0;
@@ -13,41 +13,6 @@ body{
     margin: 10px;
 }
 @import url('../font/SF-Pro.ttf');
-
-.accordion{
-    padding: 30px;
-    border: 2px solid #2f2f2f;
-    margin-bottom: 10px;
-}
-.content{
-    font-size: 19px;
-    max-height: 0;
-    overflow: hidden;
-    transition: .2s ease-in-out;
-}
-.accordion__arrow {
-  position: relative;
-}
-.accordion__arrow::after {
-  content: '';
-  position: absolute;
-  height: 2px;
-  width: 15px;
-  display: block;
-  background: #79AF98;
-  transform: translateX(-5px) rotate(41deg);
-  transition: .3s ease;
-}
-.accordion__arrow::before {
-  content: '';
-  position: absolute;
-  height: 2px;
-  width: 15px;
-  display: block;
-  background: #79AF98;
-  transform: translateX(-15px) rotate(-42deg);
-  transition: .3s ease;
-}
 .digital-clock{
   position: absolute;
   top: 50%;
